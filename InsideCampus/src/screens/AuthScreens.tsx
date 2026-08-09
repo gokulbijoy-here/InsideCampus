@@ -42,9 +42,11 @@ export const OnboardingScreen: React.FC<OnboardingScreenProps> = ({ navigation }
       >
         {slides.map((slide, index) => (
           <View key={index} className="w-full flex-1 justify-center items-center px-8">
-            <View className="w-32 h-32 bg-white/20 rounded-3xl items-center justify-center mb-8">
-              <LayoutGrid size={64} color="#FFFFFF" />
-            </View>
+            <Image
+              source={require('../assets/logo.png')}
+              className="w-32 h-32 rounded-3xl mb-8"
+              resizeMode="contain"
+            />
             <Text className="text-3xl font-bold text-white text-center mb-4">
               {slide.title}
             </Text>
@@ -115,9 +117,11 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
       <ScrollView className="flex-1 px-6 pt-12">
         {/* Header */}
         <View className="items-center mb-12">
-          <View className="w-24 h-24 bg-primary rounded-3xl items-center justify-center mb-4">
-            <LayoutGrid size={48} color="#FFFFFF" />
-          </View>
+          <Image
+            source={require('../assets/logo.png')}
+            className="w-24 h-24 rounded-3xl mb-4"
+            resizeMode="contain"
+          />
           <Text className="text-2xl font-bold text-gray-900 dark:text-white">
             InsideCampus
           </Text>
